@@ -1,0 +1,100 @@
+{% extends 'form_div_layout.html.twig' %}
+
+{% block textarea_widget %}
+{# spaceless #}
+    <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
+{# endspaceless #}
+{% endblock textarea_widget %}
+
+{% block integer_widget %}
+{# spaceless #}
+    {% set type = type|default('number') %}
+    {% set class = 'small' %}
+    {{ block('field_widget') }}
+{# endspaceless #}
+{% endblock %}
+
+{% block checkbox_widget %}
+{# spaceless #}
+    <input type="checkbox" {{ block('widget_attributes') }}{% if value is defined %} value="{{ value }}"{% endif %}{% if checked %} checked="checked"{% endif %} />
+{# endspaceless #}
+{% endblock checkbox_widget %}
+
+{% block radio_widget %}
+{# spaceless #}
+    <input type="radio" {{ block('widget_attributes') }}{% if value is defined %} value="{{ value }}"{% endif %}{% if checked %} checked="checked"{% endif %} />
+{# endspaceless #}
+{% endblock radio_widget %}
+
+
+{% block datetime_widget %}
+{# spaceless #}
+    <div class="datetime_widget input">
+    {% if widget == 'single_text' %}
+        {{ block('field_widget') }}
+    {% else %}
+        <div {{ block('widget_container_attributes') }}>
+            {{ form_errors(form.date) }}
+            {{ form_errors(form.time) }}
+            {{ form_widget(form.date) }}
+            {{ form_widget(form.time) }}
+        </div>
+    {% endif %}
+    </div>
+{# endspaceless #}
+{% endblock datetime_widget %}
+
+{% block choice_widget %}
+{# spaceless #}
+    {% if expanded %}
+        <div {{ block('widget_container_attributes') }}>
+        {% for child in form %}
+            {{ form_widget(child) }}
+            {{ form_label(child) }}
+        {% endfor %}
+        </div>
+    {% else %}
+    <select {{ block('widget_attributes') }}{% if multiple %} multiple="multiple"{% endif %}>
+        {% if empty_value is not none %}
+            <option value="">{{ empty_value|trans }}</option>
+        {% endif %}
+        {% if preferred_choices|length > 0 %}
+            {% set options = preferred_choices %}
+            {{ block('widget_choice_options') }}
+            {% if choices|length > 0 and separator is not none %}
+                <option disabled="disabled">{{ separator }}</option>
+            {% endif %}
+        {% endif %}
+        {% set options = choices %}
+        {{ block('widget_choice_options') }}
+    </select>
+    {% endif %}
+{# endspaceless #}
+{% endblock choice_widget %}
+
+{# --------------------------------------- #}
+{% block field_errors %}
+{% spaceless %}
+    <span class="help-inline">
+        {% if errors|length > 0 %}
+            {% for error in errors %}
+                {{ error.messageTemplate|trans(error.messageParameters, 'validators') }}<br />
+            {% endfor %}
+        {% endif %}
+    </span>
+{% endspaceless %}
+{% endblock field_errors %}
+
+{% block field_row %}
+    <div class="clearfix {% if errors|length > 0 %}error{% endif %}">
+        {{ form_label(form, label) }}
+        <div class="input">
+            {% set class = '' %}
+            {% if errors|length > 0 %}
+                {% set class = 'error' %}
+            {% endif %}
+            {{ form_widget(form, { 'attr': { 'class': class } }) }}
+            {{ form_errors(form) }}
+        </div>
+    </div>
+{% endblock field_row %}
