@@ -7,7 +7,7 @@ This bundle provides the assets from the twitter bootstrap and the twig theme fo
 
 ## Installation
 
-Include this repository in your deps file:
+Include this repository in your `app/deps` file:
 
 ``` php
 
@@ -25,6 +25,7 @@ $loader->registerNamespaces(array(
 ```
 
 Register the bundle in `app/AppKernel.php`
+
 ``` php
 
     public function registerBundles() {
