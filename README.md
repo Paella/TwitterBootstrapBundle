@@ -12,7 +12,7 @@ Include this repository in your `app/deps` file:
 ``` php
 
 [PaellaTwitterBootstrapBundle]
-    git=http://github.com/guilleferrer/PaellaTwitterBootstrapBundle.git
+    git=http://github.com/Paella/TwitterBootstrapBundle.git
     target=/bundles/Paella/Bundle/TwitterBootstrapBundle
 ```
 Register the Namespace in the `app/autoload.php` file : 
