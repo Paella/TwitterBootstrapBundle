@@ -15,7 +15,7 @@ Include this repository in your deps file:
     git=http://github.com/guilleferrer/PaellaTwitterBootstrapBundle.git
     target=/bundles/Paella/Bundle/TwitterBootstrapBundle
 ```
-Register the Namespace in the `autoload.php` file : 
+Register the Namespace in the `app/autoload.php` file : 
 
 
 ``` php
@@ -24,6 +24,7 @@ $loader->registerNamespaces(array(
 ));
 ```
 
+Register the bundle in `app/AppKernel.php`
 ``` php
 
     public function registerBundles() {
