@@ -39,20 +39,23 @@ Publish the assets of your application :
 
 ``` php app/console assets:install ```
 
-Add the assets in you template: 
-``` jinja 
-            {% block stylesheets %}
-                <link rel="stylesheet" href="{{ asset('bundles/paellatwitterbootstrap/css/bootstrap-1.4.0.min.css') }}" type="text/css" media="all" >
-            {% endblock %}
-            {% block javascripts %}
-                <script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-modal.js') }}"></script>
-                <script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-alerts.js') }}"></script>
-                <script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-twipsy.js') }}"></script>
-                <script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-popover.js') }}"></script>
-                <script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-dropdown.js') }}"></script>
-                <script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-scrollspy.js') }}"></script>
-                <script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-tabs.js') }}"></script>
-                <script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-buttons.js') }}"></script>
-                <script src="{{ asset('bundles/paellatwitterbootstrap/js/jquery.tablesorter.min.js') }}"></script>
-            {% endblock %}
+Add the assets in you template:
+
+```html+jinja
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('bundles/paellatwitterbootstrap/css/bootstrap-1.4.0.min.css') }}" type="text/css" media="all" >
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-modal.js') }}"></script>
+<script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-alerts.js') }}"></script>
+<script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-twipsy.js') }}"></script>
+<script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-popover.js') }}"></script>
+<script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-dropdown.js') }}"></script>
+<script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-scrollspy.js') }}"></script>
+<script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-tabs.js') }}"></script>
+<script src="{{ asset('bundles/paellatwitterbootstrap/js/bootstrap-buttons.js') }}"></script>
+<script src="{{ asset('bundles/paellatwitterbootstrap/js/jquery.tablesorter.min.js') }}"></script>
+{% endblock %}
 ```
+
