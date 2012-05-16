@@ -5,9 +5,9 @@
     {% endif %}
     <p>
     {% if use_raw|default(false) %}
-        {{ message|trans|raw }}
+        {{ message|trans|raw|nl2br }}
     {% else %}
-        {{ message|trans }}
+        {{ message|trans|nl2br }}
     {% endif %}
     </p>
 </div>
