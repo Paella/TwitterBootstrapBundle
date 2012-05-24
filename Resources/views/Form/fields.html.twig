@@ -87,19 +87,21 @@
 {% block field_row %}
 {% spaceless %}
     <div class="control-group{% if errors|length > 0 %} error{% endif %}">
-        {{ form_label(form, label|default(null)) }}
+        {{ form_label(form, label|default(null), { 'attr': {'class': 'control-label'} }) }}
+        <div class="controls">
+            {% if form.get('add_on') %}
+                <div class="input-append">
+            {% endif %}
 
-            <div class="controls">
-                {% if form.get('add_on') %}
-                    <div class="input-append">
-                {% endif %}
                 {{ form_widget(form) }}
-                    {% if form.get('add_on') %}
+
+            {% if form.get('add_on') %}
                     <span class="add-on">{{ form.get('add_on') }}</span>
-                    </div>
-                    {% endif %}
-                {{ form_errors(form) }}
-            </div>
+                </div>
+            {% endif %}
+
+            {{ form_errors(form) }}
+        </div>
     </div>
 {% endspaceless %}
 {% endblock field_row %}
