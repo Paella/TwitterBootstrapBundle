@@ -1,6 +1,6 @@
 <?php
 
-namespace Paella\Bundle\TwitterBootstrapBundle\DependencyInjection;
+namespace Paella\TwitterBootstrapBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

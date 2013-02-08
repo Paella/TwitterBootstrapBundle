@@ -1,6 +1,6 @@
 <?php
 
-namespace Paella\Bundle\TwitterBootstrapBundle;
+namespace Paella\TwitterBootstrapBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Paella\Bundle\TwitterBootstrapBundle\DependencyInjection;
+namespace Paella\TwitterBootstrapBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

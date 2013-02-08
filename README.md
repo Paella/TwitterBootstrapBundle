@@ -28,7 +28,7 @@ Register the bundle in `app/AppKernel.php`
 ``` php
     public function registerBundles() {
         $bundles = array(
-            new Paella\Bundle\TwitterBootstrapBundle\PaellaTwitterBootstrapBundle(),
+            new Paella\TwitterBootstrapBundle\PaellaTwitterBootstrapBundle(),
         );
 ```
 

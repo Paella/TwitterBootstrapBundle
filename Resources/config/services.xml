@@ -6,7 +6,7 @@
 
     <!--
     <parameters>
-        <parameter key="wilog_twitter_bootstrap.example.class">Paella\Bundle\TwitterBootstrapBundle\Example</parameter>
+        <parameter key="wilog_twitter_bootstrap.example.class">Paella\TwitterBootstrapBundle\Example</parameter>
     </parameters>
 
     <services>
