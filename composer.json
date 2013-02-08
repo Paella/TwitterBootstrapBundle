@@ -1,0 +1,22 @@
+{
+    "name": "paella/twitter-bootstrap-bundle",
+    "description": "(yet another) bundle to easily integrate twitter bootstrap css/js libraries. It is based on the phiamo/MopaBootstrapBundle (but meant to be simpler)",
+    "keywords": ["bootstrap","twitter","css","js"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Saliou",
+            "email": "kevin@saliou.name"
+        },
+        {
+            "name": "Guillermo Ferrer",
+            "email": "guilleferrer@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Paella\\TwitterBootstrapBundle": "."
+        }
+    },
+    "target-dir": "Paella/TwitterBootstrapBundle"
+}
