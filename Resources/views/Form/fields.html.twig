@@ -89,14 +89,14 @@
     <div class="control-group{% if errors|length > 0 %} error{% endif %}">
         {{ form_label(form, label|default(null), { 'label_attr': {'class': 'control-label'} }) }}
         <div class="controls">
-            {% if form.get('add_on') %}
+            {% if form.vars.add_on is defined %}
                 <div class="input-append">
             {% endif %}
 
                 {{ form_widget(form) }}
 
-            {% if form.get('add_on') %}
-                    <span class="add-on">{{ form.get('add_on') }}</span>
+            {% if form.vars.add_on is defined %}
+                    <span class="add-on">{{ form.vars.add_on }}</span>
                 </div>
             {% endif %}
 
